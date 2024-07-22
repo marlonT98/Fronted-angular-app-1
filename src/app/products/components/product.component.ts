@@ -9,6 +9,7 @@ import { Product } from '../models/Product';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
+
 export class ProductComponent implements OnInit{
 
   products:Product[]=[];//creamos un array vacio
@@ -19,9 +20,13 @@ export class ProductComponent implements OnInit{
 
   //inicializamos con todos los productos del servicio al array vacio que creamos
   ngOnInit(): void {
-    this.service.findAll().subscribe(products => {
-      this.products = products;
+
+    this.service.findAll().subscribe( products => {
+
+      this.products = products; 
+
     });
+
   }
 
 

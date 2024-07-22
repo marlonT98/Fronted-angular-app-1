@@ -7,6 +7,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
+
   private products:Product[] = [
 
     {
@@ -33,6 +34,7 @@ export class ProductService {
 
   constructor() { }
 
+  //metodo que muestra todos los productos
   findAll():Observable<Product[]> {
     return of( this.products );
   }
